@@ -28,6 +28,10 @@ namespace EmployeeProject.Controllers
                 {
                     Id = e.Id,
                     FullName = e.GetFullName(initialMiddle: true),
+                    FirstName = e.FirstName,
+                    MiddleName = e.MiddleName,
+                    LastName = e.LastName,
+                    Suffix = e.Suffix,
                     Position = e.Position,
                     MonthlyRate = e.MonthlyRate,
                     OnBoardDate = e.OnBoardDate
@@ -52,6 +56,10 @@ namespace EmployeeProject.Controllers
             {
                 Id = e.Id,
                 FullName = e.GetFullName(initialMiddle: true),
+                FirstName = e.FirstName,
+                MiddleName = e.MiddleName,
+                LastName = e.LastName,
+                Suffix = e.Suffix,
                 Position = e.Position,
                 MonthlyRate = e.MonthlyRate,
                 OnBoardDate = e.OnBoardDate
@@ -110,7 +118,7 @@ namespace EmployeeProject.Controllers
             }
         }
 
-        [HttpPatch("{id}")]
+        [HttpPut("{id}")]
         public async Task<IActionResult> EditEmployee(int id, UpdateEmployeeDto employeeDto)
         {
             try
@@ -138,7 +146,7 @@ namespace EmployeeProject.Controllers
             }
         }
 
-        [HttpPut("{id}")]
+        [HttpPatch("{id}")]
         public async Task<IActionResult> PartialEditEmployee(int id, PartialUpdateEmployeeDto employeeDto)
         {
             try
