@@ -1,5 +1,5 @@
 
-# Employee-Crud using Dapper, C#, MSSQL Server, and ASP.NET Core 8.0 API
+# Employee-Crud using C#, MSSQL Server, and ASP.NET Core 8.0 API
 
 This repository contains an API for managing employee information. It is built with C#, ASP.NET Core 8.0, EntityFramework SqlServer for database operations, and Microsoft SQL Server data storage.
 
